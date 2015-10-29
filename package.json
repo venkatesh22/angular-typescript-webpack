@@ -1,0 +1,24 @@
+{
+  "name": "angular-typescript-webpack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/claycephas/angular-typescript-webpack.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/claycephas/angular-typescript-webpack/issues"
+  },
+  "homepage": "https://github.com/claycephas/angular-typescript-webpack#readme",
+  "devDependencies": {
+    "tsc": "^1.20150623.0",
+    "tsd": "^0.6.5",
+    "webpack": "^1.12.2"
+  }
+}
