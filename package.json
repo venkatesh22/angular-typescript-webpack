@@ -1,8 +1,9 @@
 {
   "name": "angular-typescript-webpack",
   "version": "1.0.0",
-  "description": "",
+  "description": "Seed project for angular + typescript + webpack",
   "main": "index.js",
+  "readme": "readme.md",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -17,9 +18,9 @@
   },
   "homepage": "https://github.com/claycephas/angular-typescript-webpack#readme",
   "devDependencies": {
-    "tsc": "^1.20150623.0",
-    "tsd": "^0.6.5",
-    "typescript": "^1.6.2",
-    "webpack": "^1.12.2"
+    "ts-loader": "^0.6.0"
+  },
+  "dependencies": {
+    "jquery": "^2.1.4"
   }
 }
