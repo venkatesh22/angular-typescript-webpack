@@ -2,7 +2,7 @@
 	"version": "0.1.0",
 	// List of configurations. Add new configurations or edit existing ones.
 	"configurations": [
-		{
+		/*{
 			// Name of configuration; appears in the launch configuration drop down menu.
 			"name": "Launch index.js",
 			// Type of configuration.
@@ -36,6 +36,12 @@
 			// Port to attach to.
 			"port": 5858,
 			"sourceMaps": false
+		}*/
+		{
+			"name": "Start",
+			"type": "node",
+			"runtimeExecutable": "C:\\Program Files\\nodejs\\npm",
+			"runtimeArgs": ["start"]
 		}
 	]
 }

@@ -5,6 +5,7 @@
   "main": "index.js",
   "readme": "readme.md",
   "scripts": {
+    "start": "webpack-dev-server",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -18,9 +19,14 @@
   },
   "homepage": "https://github.com/claycephas/angular-typescript-webpack#readme",
   "devDependencies": {
-    "ts-loader": "^0.6.0"
+    "ts-loader": "^0.6.0",
+    "tsd": "^0.6.5",
+    "typescript": "^1.6.2",
+    "webpack": "^1.12.2",
+    "webpack-dev-server": "^1.12.1"
   },
   "dependencies": {
+    "angular": "^1.4.7",
     "jquery": "^2.1.4"
   }
 }

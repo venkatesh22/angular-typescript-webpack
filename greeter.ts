@@ -1,6 +1,6 @@
-function greet(name: string) {
-	return "Hello " + name;
+
+export = class Greeter {
+	greet(name) {
+		return "Hello " + name;
+	}
 }
-
-
-export = greet;
