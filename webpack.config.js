@@ -1,20 +1,18 @@
-var webpack = require('webpack');
+var webpack = require("webpack");
 
 module.exports = {  
-  entry: './app.ts',
+  entry: "./source/app.ts",
   output: {
-    filename: 'bundle.js'
+    filename: "bundle.js"
   },
-  devtool: 'source-map',
+  devtool: "source-map",
   resolve: {
-    extensions: ['', '.ts', '.js']
+    extensions: ["", ".ts", ".js"]
   },
-  plugins: [
-    //new webpack.optimize.UglifyJsPlugin()
-  ],
   module: {
     loaders: [
-      { test: /\.ts$/, loader: 'ts-loader' }
+      { test: /\.ts$/, loader: "ts-loader" },
+      { test: /\.scss$/, loaders: ["style", "css", "sass"]}
     ]
   }
 }
