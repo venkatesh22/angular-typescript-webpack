@@ -1,7 +1,7 @@
 var webpack = require("webpack");
 
 module.exports = {  
-  entry: "./source/app.ts",
+  entry: "./source/index.ts",
   output: {
     filename: "bundle.js"
   },
@@ -12,7 +12,8 @@ module.exports = {
   module: {
     loaders: [
       { test: /\.ts$/, loader: "ts-loader" },
-      { test: /\.scss$/, loaders: ["style", "css", "sass"]}
+      { test: /\.scss$/, loaders: ["style", "css", "sass"]},
+      { test: /\.html$/, loader: 'raw' }
     ]
   }
 }

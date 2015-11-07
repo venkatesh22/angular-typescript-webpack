@@ -1,8 +1,4 @@
+/// <reference path="custom/webpackrequire.d.ts" />
 /// <reference path="jquery/jquery.d.ts" />
-
-interface Require {
-	(string): void;
-	context(string, boolean, RegEx): any;
-}
-
-declare var require: Require;
+/// <reference path="angularjs/angular.d.ts" />
+/// <reference path="angularjs/angular-route.d.ts" />
