@@ -5,6 +5,7 @@
 	},
 	"files": [
 		"typings/tsd.d.ts",
-		"source/index.ts"
+		"source/index.ts",
+		"source/greeter.controller.spec.ts"
 	]
 }
