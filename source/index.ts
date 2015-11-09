@@ -1,25 +1,21 @@
 
 require("./styles.scss");
-var tests = require.context(".", true, /something/);
-tests.keys().forEach(tests);
+var somethings = require.context(".", true, /something/);
+somethings.keys().forEach(somethings);
 
 import angular = require("angular");
 import angularRoute = require("angular-route");
 
-import routes = require("./routes.ts");
-import GreeterController = require("./greeter.controller.ts");
-angular.module("app", [angularRoute])
-	.config(routes)
-	//.controller("GreeterController", GreeterController)
+import {RouteConfig} from "./routes.ts";
+import {GreeterController} from "./greeter.controller.ts";
+
+export default angular.module("app", [angularRoute])
+	.config(RouteConfig)
+	.controller(GreeterController.NAME, GreeterController)
+	.name
 ;
 
 angular.element(document).ready(() => {
 	angular.bootstrap(document, ["app"]);
 });
 
-/*
-import $ = require("jquery");
-$(() => {
-	$(document.body).html("World");
-});
-*/

@@ -27,19 +27,13 @@ module.exports = function(config) {
     // preprocess matching files before serving them to the browser
     // available preprocessors: https://npmjs.org/browse/keyword/karma-preprocessor
     preprocessors: {
-        //'*.spec.ts': ['webpack', 'sourcemap']
-        'source/specs.js': ['webpack']
+        'source/specs.js': ['webpack', 'sourcemap']
     },
 
     webpack: require("./webpack.test.config.js"),
     webpackMiddleware: {
       noInfo: true
     },
-    /*plugins: [
-        require("karma-webpack"),
-        require("karma-jasmine"),
-        require("karma-phantomjs-launcher")
-    ],*/
 
     // test results reporter to use
     // possible values: 'dots', 'progress'
@@ -71,7 +65,7 @@ module.exports = function(config) {
 
     // Continuous Integration mode
     // if true, Karma captures browsers, runs the tests and exits
-    singleRun: false,
+    singleRun: true,
 
     // Concurrency level
     // how many browser should be started simultanous
