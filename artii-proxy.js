@@ -12,4 +12,8 @@ api.get("/make", function (req, res) {
 	request.get("http://artii.herokuapp.com/make?text=" + req.query.text).pipe(res);
 });
 
-api.listen(10009);
+api.listen(10009, function() {
+	console.log("ready at http://localhost:10009/make?text=Hi");
+});
+
+

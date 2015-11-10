@@ -1,6 +1,6 @@
 
 
-export class GreeterController {
+export default class GreeterController {
 	static NAME: string = "GreeterController";
 	
 	greeting: string;

@@ -6,7 +6,8 @@
   "readme": "readme.md",
   "scripts": {
     "start": "webpack-dev-server",
-    "test": "karma start --no-single-run"
+    "test": "karma start --no-single-run",
+    "start-artii-proxy": "node artii-proxy.js"
   },
   "repository": {
     "type": "git",

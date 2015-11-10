@@ -1,9 +1,9 @@
 
-import angular = require("angular");
-import angularMocks = require("angular-mocks/ngMock");
+import * as angular from "angular";
+import "angular-mocks/ngMock";
 
 import app from "./index.ts";
-import {GreeterController} from "./greeter.controller.ts";
+import GreeterController from "./greeter.controller.ts";
 
 describe("GreeterController", () => {
 	beforeEach(angular.mock.module(app));

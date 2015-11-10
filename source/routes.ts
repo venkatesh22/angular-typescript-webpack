@@ -1,7 +1,7 @@
 
-import {GreeterController} from "./greeter.controller.ts";
+import GreeterController from "./greeter.controller.ts";
 
-export function RouteConfig($routeProvider: angular.route.IRouteProvider) {
+export default function RouteConfig($routeProvider: angular.route.IRouteProvider) {
 	$routeProvider
 		.when("/", {
 			controller: GreeterController.NAME,
