@@ -1,9 +1,11 @@
 var webpack = require("webpack");
 var ExtractTextPlugin = require("extract-text-webpack-plugin");
+var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {  
   entry: "./source/index.ts",
   output: {
+    path: __dirname + "/dist",
     filename: "bundle.js"
   },
   devtool: "source-map",
@@ -21,7 +23,10 @@ module.exports = {
     empty: true
   },
   plugins: [
-    new ExtractTextPlugin("bundle.css")
+    new ExtractTextPlugin("bundle.css"),
+    new HtmlWebpackPlugin({
+      template: "index.html"
+    })
   ]
 };
 
