@@ -5,9 +5,11 @@
   "main": "index.js",
   "readme": "readme.md",
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "concurrent \"npm run start-artii-proxy\" \"npm run start-webpack-dev-server\" \"npm run open-browser\"",
     "test": "karma start --no-single-run",
-    "start-artii-proxy": "node artii-proxy.js"
+    "start-artii-proxy": "node artii-proxy.js",
+    "start-webpack-dev-server": "webpack-dev-server --inline --port=9000",
+    "open-browser": "opener http://localhost:9000"
   },
   "repository": {
     "type": "git",
@@ -21,6 +23,7 @@
   "homepage": "https://github.com/claycephas/angular-typescript-webpack#readme",
   "devDependencies": {
     "angular-mocks": "^1.4.7",
+    "concurrently": "^0.1.1",
     "cors": "^2.7.1",
     "css-loader": "^0.22.0",
     "express": "^4.13.3",
@@ -34,6 +37,7 @@
     "karma-webpack": "^1.7.0",
     "node-sass": "^3.4.1",
     "null-loader": "^0.1.1",
+    "opener": "^1.4.1",
     "phantomjs": "^1.9.18",
     "raw-loader": "^0.5.1",
     "request": "^2.65.0",
