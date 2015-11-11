@@ -13,8 +13,6 @@ export default angular.module("app", [angularRoute])
 	.name
 ;
 
-angular.element(document).ready(() => {
-	angular.bootstrap(document, ["app"]);
-});
+
 
 

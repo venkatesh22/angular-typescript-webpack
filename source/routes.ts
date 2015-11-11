@@ -1,6 +1,7 @@
 
 import GreeterController from "./greeter.controller.ts";
 
+/* @ngInject */
 export default function RouteConfig($routeProvider: angular.route.IRouteProvider) {
 	$routeProvider
 		.when("/", {

@@ -5,8 +5,9 @@ export default class GreeterController {
 	
 	greeting: string;
 	
+	/* @ngInject */
 	constructor(private $http: ng.IHttpService) {
-		$http.get<string>("http://localhost:10009/make?text=Hi")
+		$http.get<string>("https://api.github.com/users/angular")
 			.then((response) => {
 				this.greeting = response.data;
 			});

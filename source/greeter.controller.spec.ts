@@ -21,7 +21,7 @@ describe("GreeterController", () => {
 	beforeEach(() => {
 		controller = $controller<GreeterController>(GreeterController.NAME);
 		
-		$httpBackend.whenGET(/make/)
+		$httpBackend.whenGET(/api\.github\.com/)
 			.respond("fake response");
 	});
 	

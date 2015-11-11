@@ -43,11 +43,5 @@
 			"runtimeExecutable": "C:\\Program Files\\nodejs\\npm",
 			"runtimeArgs": ["start"]
 		}*/
-		
-		{
-			"name": "Launch artii-proxy.js",
-			"type": "node",
-			"program": "artii-proxy.js"
-		}
 	]
 }

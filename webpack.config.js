@@ -6,7 +6,7 @@ module.exports = {
   entry: "./source/index.ts",
   output: {
     path: __dirname + "/dist",
-    filename: "bundle.js"
+    filename: "[name].js"
   },
   devtool: "source-map",
   resolve: {
@@ -14,18 +14,29 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.ts$/, loader: "ts-loader" },
+      { test: /\.ts$/, loaders: ["ng-annotate", "ts-loader"] },
       { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!sass-loader?sourceMap") },
       { test: /\.html$/, loaders: ["raw", "html-minify"] }
     ]
   },
   "html-minify-loader": {
-    empty: true
+    empty: true // don't remove empty attributes
   },
   plugins: [
     new ExtractTextPlugin("bundle.css"),
     new HtmlWebpackPlugin({
-      template: "index.html"
+      template: "index.html",
+      inject: true,
+      hash: true,
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true
+      }
+    }),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false
+      }
     })
   ]
 };
