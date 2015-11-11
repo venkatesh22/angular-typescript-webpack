@@ -1,1 +1,0 @@
-{"version":3,"sources":["webpack:///webpack:///source/styles.scss"],"names":[],"mappings":"AAGA,KACC,qBAHc","file":"bundle.css","sourcesContent":["\n$bg-color: #5ca;\n\nbody {\n\tbackground-color: $bg-color;\n}\n\n\n/** WEBPACK FOOTER **\n ** webpack:///source/styles.scss\n **/"],"sourceRoot":""}

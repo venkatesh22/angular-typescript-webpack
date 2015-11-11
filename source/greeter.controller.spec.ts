@@ -20,7 +20,7 @@ describe("GreeterController", () => {
 	var controller: GreeterController;
 	beforeEach(() => {
 		controller = $controller<GreeterController>(GreeterController.NAME);
-		
+
 		$httpBackend.whenGET(/api\.github\.com/)
 			.respond("fake response");
 	});

@@ -9,7 +9,7 @@ module.exports = {
     loaders: [
       { test: /\.ts$/, loader: "ts-loader" },
       { test: /\.scss$/, loader: "null" },
-      { test: /\.html$/, loader: 'raw' }
+      { test: /\.html$/, loader: "raw" }
     ]
   }
 }

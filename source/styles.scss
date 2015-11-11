@@ -1,6 +1,11 @@
 
-$bg-color: #5ca;
+
+
+$body-bg: #666;
+
+$icon-font-path: "~bootstrap-sass/assets/fonts/bootstrap/";
+@import "~bootstrap-sass/assets/stylesheets/_bootstrap.scss";
 
 body {
-	background-color: $bg-color;
+  padding-top: 50px;
 }

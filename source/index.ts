@@ -1,5 +1,6 @@
 
-require("./styles.scss");
+//require("./styles.scss");
+require("imports?jQuery=jquery!bootstrap-sass");
 
 import * as angular from "angular";
 import * as angularRoute from "angular-route";

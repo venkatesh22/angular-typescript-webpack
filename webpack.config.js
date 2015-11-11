@@ -3,9 +3,11 @@ var ExtractTextPlugin = require("extract-text-webpack-plugin");
 var HtmlWebpackPlugin = require("html-webpack-plugin");
 
 module.exports = {  
-  entry: "./source/index.ts",
+  entry: {
+    app: "./source/index.ts",
+    styles: "./source/styles.scss" 
+  },
   output: {
-    path: __dirname + "/dist",
     filename: "[name].js"
   },
   devtool: "source-map",
@@ -14,29 +16,16 @@ module.exports = {
   },
   module: {
     loaders: [
-      { test: /\.ts$/, loaders: ["ng-annotate", "ts-loader"] },
-      { test: /\.scss$/, loader: ExtractTextPlugin.extract("style-loader", "css-loader?sourceMap!sass-loader?sourceMap") },
-      { test: /\.html$/, loaders: ["raw", "html-minify"] }
+      { test: /\.ts$/, loaders: ["ts-loader"] },
+      { test: /\.scss$/, loaders: ["style-loader", "css-loader?sourceMap", "sass-loader?sourceMap"] },
+      { test: /\.html$/, loaders: ["raw"] },
+      { test: /\.(png|woff|woff2|eot|ttf|svg)$/, loader: "url" }
     ]
   },
-  "html-minify-loader": {
-    empty: true // don't remove empty attributes
-  },
   plugins: [
-    new ExtractTextPlugin("bundle.css"),
     new HtmlWebpackPlugin({
       template: "index.html",
-      inject: true,
-      hash: true,
-      minify: {
-        collapseWhitespace: true,
-        removeComments: true
-      }
-    }),
-    new webpack.optimize.UglifyJsPlugin({
-      compress: {
-        warnings: false
-      }
+      inject: true
     })
   ]
 };
