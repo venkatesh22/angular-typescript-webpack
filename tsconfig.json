@@ -6,6 +6,8 @@
 	"files": [
 		"typings/tsd.d.ts",
 		"source/index.ts",
-		"source/greeter.controller.spec.ts"
+		"source/greeter.controller.spec.ts",
+		"source/greeter.service.spec.ts",
+		"source/anothermodule/another.service.spec.ts"
 	]
 }

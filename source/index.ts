@@ -1,18 +1,24 @@
 
-//require("./styles.scss");
-require("imports?jQuery=jquery!bootstrap-sass");
+import "imports?jQuery=jquery!bootstrap-sass";
 
 import * as angular from "angular";
-import * as angularRoute from "angular-route";
+import * as AngularRoute from "angular-route";
 
 import RouteConfig from "./routes.ts";
 import GreeterController from "./greeter.controller.ts";
+import GreeterService from "./greeter.service.ts";
+import GreeterDirective from "./greeter.directive.ts";
 
-export default angular.module("app", [angularRoute])
+import AnotherModule from "./anothermodule";
+
+export default angular.module("app", [
+	AngularRoute,
+	AnotherModule])
 	.config(RouteConfig)
 	.controller(GreeterController.NAME, GreeterController)
-	.name
-;
+	.service(GreeterService.NAME, GreeterService)
+	.directive(GreeterDirective.NAME, GreeterDirective.factory)
+	.name;
 
 
 
